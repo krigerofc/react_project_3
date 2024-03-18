@@ -5,17 +5,16 @@
     width: 100%;
     height: 50px;
     color: whitesmoke;
-    position: fixed;
-    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding-block: 0.5rem;
+    position: absolute;
 }
 
 .footer h2{
     font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
     font-weight: 300;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }

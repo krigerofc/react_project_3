@@ -1,0 +1,12 @@
+.banner{
+    display: block;
+    width: 100%;/*1920 x 347*/
+    height: 400px;
+    background-repeat: no-repeat;
+    /* background-image: url('/public/img/wallpaper_pcgreen.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    padding-top: 100px;
+}
+
