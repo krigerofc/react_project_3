@@ -1,25 +1,9 @@
-//import './app.cs'
-import Banner from "./components/Banner";
-import Card from "./components/Card";
-import Category, {categorias, filtrerCategory} from "./components/Category";
-import Container from "./components/Container";
-import Header from "./components/Header";
-import Rodape from "./components/Rodape";
+import AppRoutes from "./routes";
 
+// NPM INSTALL REACT-ROUTER-DOM para criar rotas react
 function App() {
   return (
-    <> 
-      <Header/>
-      <Banner image='wallpaper_pcgreen'  />
-      <Container>
-        {categorias.map((category, index) => 
-        <Category category={category}>
-          {filtrerCategory(index).map((video) => <Card id={video.id} key={video.id}/>)}
-        </Category>
-        )}
-      </Container>
-      <Rodape/>
-    </>
+    <AppRoutes/>
   );
 }
 
