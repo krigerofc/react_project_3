@@ -24,11 +24,15 @@
     font-family: "Roboto", sans-serif;
     letter-spacing: 2px;
     font-weight: 500;
+    color:rgb(23, 127, 247);
 }
 
 .header nav{
     margin-right: 2.0rem;
+    color: whitesmoke;
+    text-decoration: none;
 }
+
 
 .header a{
     text-decoration: none;
@@ -36,4 +40,5 @@
     font-family: "Roboto", sans-serif;
     letter-spacing: 2px;
     padding-inline: 0.6rem;
+    color:whitesmoke
 }
