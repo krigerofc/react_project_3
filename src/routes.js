@@ -9,7 +9,8 @@ function AppRoutes(){
         <BrowserRouter> 
             <Routes>
                 <Route path="/" element={ <Home/> }></Route>
-                <Route path="/watch" element={ <Watch/> }></Route>
+                {/* para criar rota dinamica basta utilizar : e o parametro. ':id'  */}
+                <Route path="/watch/:id" element={ <Watch/> }></Route>
                 <Route path="*" element={ <PageNotFound/> }></Route>
                 {/* * é o seletor global, se eu acessar alguma outra rota diferente vai chamar a pagina erro */}
             </Routes>
