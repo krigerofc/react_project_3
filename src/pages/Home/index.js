@@ -1,5 +1,4 @@
 //import './app.cs'
-import { useState } from "react";
 import Banner from "../../components/Banner";
 import Card from "../../components/Card";
 import Category, {categorias, filtrerCategory} from "../../components/Category";
@@ -9,34 +8,17 @@ import Rodape from "../../components/Rodape";
 
 // NPM INSTALL REACT-ROUTER-DOM para criar rotas react
 function Home() {
-  function Get_name(event){
-    console.log(event.target.value)
-    set_nome(event.target.value)
-  }
-
-  // hook - Gancho -> useState é um hook de estado
-  // fazemos a destroturação de um array passando nome da varivel(nome) e um segundo nome para a variavel
-  // que vai ser usar para setar valores, ou sejá nome é como chamamos e set é para alterar
-  const [nome, set_nome] = useState()
 
   return (
     <> 
       <Header/>
       <Banner image='wallpaper_pcgreen'  />
       <Container>
-
-        <input
-          type="text"
-          placeholder="Nome"
-          // se eu definir um valor pra esse elemento, ele não pode ser modificadoo mas se não definir ele pode
-          onChange={Get_name}
-        />
-          <h2>{nome}</h2>
-        {/* {categorias.map((category, index) => 
+        {categorias.map((category, index) => 
         <Category category={category}>
           {filtrerCategory(index).map((video) => <Card id={video.id} key={video.id}/>)}
         </Category>
-        )} */}
+        )}
       </Container>
       <Rodape/>
     </>

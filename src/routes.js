@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Watch from "./pages/Watch";
 import PageNotFound from "./pages/PageNotFound";
+import Search from "./pages/Search";
 
 function AppRoutes(){
     return(
@@ -12,6 +13,7 @@ function AppRoutes(){
                 {/* para criar rota dinamica basta utilizar : e o parametro. ':id'  */}
                 <Route path="/watch/:id" element={ <Watch/> }></Route>
                 <Route path="*" element={ <PageNotFound/> }></Route>
+                <Route path="/search" element={ <Search/> }></Route>
                 {/* * é o seletor global, se eu acessar alguma outra rota diferente vai chamar a pagina erro */}
             </Routes>
         </BrowserRouter>
