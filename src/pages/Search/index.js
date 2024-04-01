@@ -3,7 +3,7 @@ import Header from '../../components/Header';
 import Rodape from '../../components/Rodape';
 import styles from './Search.module.css'
 import videos from '../../json/videos.json'
-import Video from '../../components/Video';
+import Procurar from '../../components/Procurar';
 
 function Search(){
     return(
@@ -12,7 +12,7 @@ function Search(){
         <Container>
             <section className={styles.search}>
                 <h2>Pesquisar</h2>
-                <Video videos={videos}/>
+                <Procurar videos={videos}/>
             </section>
         </Container>
         <Rodape/>
