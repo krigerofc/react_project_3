@@ -1,0 +1,15 @@
+.card {
+    display: flex;
+}
+
+.capa {
+    width: 225px;
+    border-radius: 8px;
+}
+
+/* aula 14 */
+.capa:hover {
+    transform: scale(1.15);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #222;
+}
