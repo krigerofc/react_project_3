@@ -1,6 +1,7 @@
 //import './app.cs'
 import Banner from "../../components/Banner";
 import Card from "../../components/Card";
+import Carousel from "../../components/Carousel";
 import Category, {categorias, filtrerCategory} from "../../components/Category";
 import Container from "../../components/Container";
 import Header from "../../components/Header";
@@ -16,7 +17,9 @@ function Home() {
       <Container>
         {categorias.map((category, index) => 
         <Category category={category}>
-          {filtrerCategory(index).map((video) => <Card id={video.id} key={video.id}/>)}
+          <Carousel>
+            {filtrerCategory(index).map((video) => (<Card id={video.id} key={video.id}/>))}
+          </Carousel>
         </Category>
         )}
       </Container>
