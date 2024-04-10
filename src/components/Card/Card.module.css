@@ -1,7 +1,8 @@
 .card {
     display: flex;
+    /* aula 16 */
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     justify-content: flex-end;
 }
 
@@ -17,8 +18,8 @@
     box-shadow: 0 0 10px #222;
 }
 
-
-.icon{
+/* aula 16 */
+.icon {
     width: 30px;
     height: 30px;
     background-color: #00000050;
@@ -32,6 +33,7 @@
     margin-bottom: 10px;
 }
 
-.icon:hover{
+.icon:hover {
+    cursor: pointer;
     background-color: #000000;
 }

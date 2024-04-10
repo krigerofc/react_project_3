@@ -1,48 +1,48 @@
-import { useContext, useState } from "react";
-import { createContext } from "react";
+import { createContext, useContext, useState } from "react";
 
-export const FavoritesContext = createContext()
-FavoritesContext.displayName = 'MyFavorites'
+export const FavoritesContext = createContext();
+FavoritesContext.displayName = "MyFavorites";
 
-// CONTEXTO É UM STATES GLOBAL como o state normal porem em todas as rotas/pagias
-export default function FavoritesProvider({children}){
-    const [favorite, setfavorite] = useState([])
+export default function FavoritesProvider({ children }) {
+	const [ favorite, setFavorite ]	= useState([]);
 
-    return (
-        <FavoritesContext.Provider
-            value={{favorite, setfavorite}}
-        >
-            { children }
-        </FavoritesContext.Provider>
-    );
+	return (
+		<FavoritesContext.Provider
+			value={{favorite, setFavorite}} >
+			{ children }
+		</FavoritesContext.Provider>
+	);
 }
 
-// hook personalizado
-// hook deve ser atrelado a um evento / componente
-export function useFavoriteContext(){
-    const {favorite, setfavorite} = useContext(FavoritesContext)
+/* Hook personalizado */
+export function useFavoriteContext() {
+	const { favorite, setFavorite }	 = useContext(FavoritesContext);
 
-    function addfavorite(newfavorite){
-        // add novos items a lista
+	function addFavorite(newFavorite) {
 
-        // verificar se tem item repetido
-        const repeatFavorite = favorite.some((item) => item.id === newfavorite.id)
+		/* verificar se tem item favorito repetido */
+		const repeatedFavorite = favorite.some(item => item.id === newFavorite.id);
 
-        // nova lista recebe valor anterior
-        let newList = [...favorite]
+		/* nova lista recebe lista anterior */
+		let newList = [...favorite]
 
-        // verificar se não tem repetido e adicionar a lista de favoritos
-        if(!repeatFavorite){
-            newList.push(newfavorite)
-            return setfavorite(newList)
-        }
+		/* verificar se nao tem repetido entao adicione o item na listsa de favoritos */
+		if(!repeatedFavorite) {
+			newList.push(newFavorite)
+			return setFavorite(newList) /* atualizar a lista */
+		}
 
-        // se for repetido ele vai ser removido da lista
-        newList = favorite.filter((fav) => fav.id !== newfavorite.id)
-        return setfavorite(newList)
-    }
+		/* se for repetido ele vai ser tirado da lista */
+		newList = favorite.filter((fav) => fav.id !== newFavorite.id)
 
-    return {
-        favorite, addfavorite
-    }
+		/* nova lista atualizada */
+		return setFavorite(newList)
+
+	}
+
+	return {
+		favorite,
+		addFavorite
+	}
+
 }

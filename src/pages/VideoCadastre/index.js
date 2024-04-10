@@ -1,17 +1,17 @@
-import Container from '../../components/Container';
-import Footer from '../../components/Footer';
-import Form from '../../components/Form';
-import Header from '../../components/Header';
-import styles from './VideoCadastre.module.css'
+import Header from "../../components/Header";
+import Container from "../../components/Container";
+import Form from "../../components/Form";
+import Footer from "../../components/Footer";
 
-function VideoCadastre(){
-    return(
+function VideoCadastre() {
+
+    return (
         <>
-            <Header/>
+            <Header />
             <Container>
-                <Form/>
+                <Form />
             </Container>
-            <Footer/>
+            <Footer />
         </>
     );
 }
